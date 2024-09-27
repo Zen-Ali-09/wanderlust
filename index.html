@@ -2,60 +2,71 @@
 <html>
 <head>
 <title>WanderLustAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
 <style>
 
   body {
-  font-family: sans-serif;
+    background: rgb(191,255,199);
+    background: linear-gradient(310deg, rgba(191,255,199,1) 17%, rgba(86,223,198,0.6172566371681416) 89%);
+  font-family: Fredoka;
+  font-weight: 100;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(b.gif);
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #chat-container {
-  background: rgb(238, 174, 202);
-  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  border-radius: 20px;
+  background: rgb(191,255,199);
+  background: linear-gradient(150deg, rgba(191,255,199,1) 20%, rgba(86,223,198,0.6172566371681416) 89%);
+
+  border-radius: 50px;
   padding: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(78, 77, 77, 0.1);
   width: 100%;
   max-width: 600px; /* Set a maximum width for larger screens */
   height: 80vh;
 }
 
 h1 {
+  font-weight: lighter;
   text-align: center;
   margin-bottom: 10px;
 }
 
 #chat-history {
-  height: 65vh;
+  height: 60vh;
   overflow-y: scroll;
+  border-radius: 20px;
 }
 
 .user-message {
   text-align: right;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: #f2f7ef;
   border-radius: 50px;
   margin-bottom: 10px;
+  font-size: 20px  ;
 }
 
 .bot-message {
   text-align: left;
   padding: 10px;
-  background-color: #e0f0e0;
+  background-color: #fcfffc;
   border-radius: 20px;
   margin-bottom: 20px;
+  font-size: 20px  ;
 }
 
 form {
   display: flex;
-  margin-top: 10px;
+  margin-top: 55px;
 }
 
 input {
@@ -73,7 +84,7 @@ button {
   color: rgb(10, 10, 10);
   border: none;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   cursor: pointer;
 }
 
@@ -81,13 +92,13 @@ button {
   display: none; /* Hide by default */
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 
 #loader img {
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
 }
 
 /* Media query for screens smaller than 768px */
@@ -113,6 +124,9 @@ button {
   button {
     padding: 8px;
   }
+
+  form {
+  margin-top: 105px;}
 }
 
 /* Media query for screens smaller than 480px */
@@ -137,6 +151,9 @@ button {
     font-size: 0.8em; /* Adjust font size for very small screens */
     padding: 8px;
   }
+  
+  form {
+  margin-top: 105px;}
 
   button {
     padding: 6px;
@@ -198,6 +215,6 @@ button {
       loader.style.display = 'none'; // Hide the loader after the message is sent
     });;
     });
-  </script>
+</script>
 </body>
 </html>
