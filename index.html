@@ -22,6 +22,24 @@
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+
+#chat-history::-webkit-scrollbar {
+  width: 0px;
+}
+
+#chat-history::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+#chat-history::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+#chat-history::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 #chat-container {
   background: rgb(191,255,199);
   background: linear-gradient(150deg, rgba(191,255,199,1) 20%, rgba(86,223,198,0.6172566371681416) 89%);
@@ -67,7 +85,7 @@ h1 {
 
 form {
   display: flex;
-  margin-top: 55px;
+  margin-top: 90px;
 }
 
 input {
@@ -98,6 +116,7 @@ button {
 }
 
 #loader img {
+  padding: 10px;
   width: 100px;
   height: 100px;
 }
