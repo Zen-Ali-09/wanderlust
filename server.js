@@ -8,7 +8,7 @@ const dotenv = require('dotenv').config()
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
-const MODEL_NAME = "gemini-pro";
+const MODEL_NAME = "gemini-2.5-pro-exp-03-25";
 const API_KEY = process.env.API_KEY;
 
 async function runChat(userInput) {
